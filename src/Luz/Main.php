@@ -12,7 +12,7 @@ use pocketmine\entity\EffectInstance;
 //Tempo
 use const INT32_MAX;
 
-class Main extends Wolf {
+class Luz extends Wolf {
   
   public function onEnable(){
     $this->getLogger()->notice("§aPlugin Lanterna v2.0 ativado com sucesso!\n§eCriador:  WolfZeroStar");
