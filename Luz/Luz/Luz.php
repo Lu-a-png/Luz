@@ -1,5 +1,5 @@
 <?php
-namespace Luz/Luz;
+namespace Luz\Luz;
 //Base
 use pocketmine\plugin\PluginBase as Wolf;
 //Comandos 
