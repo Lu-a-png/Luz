@@ -41,7 +41,7 @@ class Main extends Wolf {
                 $player->sendTip("§7[§6LUZ§7] §4Luz Desativada Com Sucesso !");
                 }
              }
-             return true;
          }
+      return true;
       }
 }
