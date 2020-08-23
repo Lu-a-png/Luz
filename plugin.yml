@@ -4,6 +4,12 @@ main: Luz\Luz
 author: Luriuker 
 version: 2.0.0
 commands:
-   luz:
-    description: "Comando de Luz infinita"
+  luz:
+    description: on|off
+    use: "/luz <on|off>"
     permission: luz.cmd
+
+permissions:
+  luz.cmd:
+    description: Permissão para usa o /luz
+    default: true
