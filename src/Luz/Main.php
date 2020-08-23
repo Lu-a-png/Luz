@@ -1,6 +1,6 @@
 <?php
 
-namespace (Nome da pasta);
+namespace Luz;
 //Base
 use pocketmine\plugin\PluginBase as Wolf;
 //Comandos 
