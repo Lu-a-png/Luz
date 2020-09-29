@@ -30,8 +30,8 @@ class Main extends Wolf {
               
               case "on":
                 //$effect = new EffectInstance(Effect::getEffect(16), INT32_MAX, 1, false);
-                //$sender->addEffect($effect);
-                Effect::getEffect(16), INT32_MAX, 1, false;
+                $sender->getPlayer()->addEffect($effect);
+                $effect = Effect::getEffect(16), INT32_MAX, 1, false;
                 
                 $sender->sendMessage("§7[§6LUZ§7] §aLuz Ativada Com Sucesso !");
                 return true;
