@@ -2,6 +2,8 @@
 
 namespace Luz;
 //Base
+use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\plugin\PluginBase as Wolf;
 //Comandos 
 use pocketmine\command\CommandSender;
