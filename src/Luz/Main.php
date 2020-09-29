@@ -31,15 +31,15 @@ class Main extends Wolf {
               case "on":
                 //$effect = new EffectInstance(Effect::getEffect(16), INT32_MAX, 1, false);
                 //$sender->addEffect($effect);
-                EffectInstance(Effect::getEffect(16), INT32_MAX, 1, false);
+                Effect::getEffect(16), INT32_MAX, 1, false;
                 
                 $sender->sendMessage("§7[§6LUZ§7] §aLuz Ativada Com Sucesso !");
                 return true;
               case "off":
                 //$player = $sender->getPlayer();
-                $sender->getServer()->removeEffect(16);
+                $sender->getPlayer()->removeEffect(16);
                 
-                $player->sendMessage("§7[§6LUZ§7] §4Luz Desativada Com Sucesso !");
+                $sender->sendMessage("§7[§6LUZ§7] §4Luz Desativada Com Sucesso !");
                 }
              }
          }
