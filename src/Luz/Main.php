@@ -36,7 +36,8 @@ class Main extends Wolf {
             switch($args[0]){
               
               case "on":
-                $sender->addEffect(16);
+                $this->getPlayer()->getEffect((16), INT32_MAX, 1, false);
+                //$effect = new EffectInstance(Effect::getEffect(16), INT32_MAX, 1, false);
                 $sender->sendMessage("§7[§6LUZ§7] §aLuz Ativada Com Sucesso !");
 
                 return true;
