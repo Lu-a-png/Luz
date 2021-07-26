@@ -38,13 +38,13 @@ class Main extends Wolf {
             switch($args[0]){
               
               case "on":
-                $this->getEffect(16)->setDuration(INT32_MAX)->getEffectLevel(1)->isVisible(false);
+                $this->getEffect(16)->getDuration(INT32_MAX)->getEffectLevel(1)->isVisible(false);
                 $sender->sendMessage("§7[§6LUZ§7] §aLuz Ativada Com Sucesso !");
 
                 return true;
               case "off":
              
-                $sender->removeEffect(16);
+                $this->getEffect()->removeEffect(16);
                 $sender->sendMessage("§7[§6LUZ§7] §4Luz Desativada Com Sucesso !");
                 }
              }
