@@ -15,6 +15,8 @@ use const INT32_MAX;
 class Main extends Wolf {
 
   protected static $effects = [];
+  private $visible;
+  private $duration;
   
   public function onEnable(){
     $this->getLogger()->notice("§aPlugin de Iluminação Infinita v2.0 ativado com sucesso!\n§eCriador:  [WolfZeroStar, Lu-a-png, Luriuker]\n§aInfinite Lighting plugin v2.0 successfully activated\n§gCreator: [WolfZeroStar, Lu-a-png, Luriuker]");
@@ -54,5 +56,11 @@ class Main extends Wolf {
       }
    public static function getEffect(int $id) : ?Effect{
 		return self::$effects[$id] ?? null;
+	}
+   public function getDuration() : int{
+		return $this->duration;
+	}
+   public function isVisible() : bool{
+		return $this->visible;
 	}
 }
