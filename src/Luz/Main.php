@@ -54,13 +54,5 @@ class Main extends Wolf {
          }
       return true;
       }
-   public static function getEffect(int $id) : ?Effect{
-		return self::$effects[$id] ?? null;
-	}
-   public function getDuration() : int{
-		return $this->duration;
-	}
-   public function isVisible() : bool{
-		return $this->visible;
-	}
+   
 }
