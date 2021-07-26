@@ -2,15 +2,12 @@
 
 namespace Luz;
 //Base
-use pocketmine\Player;
-use pocketmine\Server;
+use pocketmine\{Player, Server};
 use pocketmine\plugin\PluginBase as Wolf;
 //Comandos 
-use pocketmine\command\CommandSender;
-use pocketmine\command\Command;
+use pocketmine\command\{CommandSender, Command, ConsoleCommandSender};
 //Efeitos
-use pocketmine\entity\Effect; 
-use pocketmine\entity\EffectInstance;
+use pocketmine\entity\{Effect, EffectInstance};
 //Tempo
 use const INT32_MAX;
 
