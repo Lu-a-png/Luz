@@ -17,7 +17,7 @@ use const INT32_MAX;
 class Main extends Wolf {
   
   public function onEnable(){
-    $this->getLogger()->notice("§aPlugin Lanterna v2.0 ativado com sucesso!\n§eCriador:  WolfZeroStar");
+    $this->getLogger()->notice("§aPlugin de Iluminação Infinita v2.0 ativado com sucesso!\n§eCriador:  [WolfZeroStar, Lu-a-png, Luriuker]\n§aInfinite Lighting plugin v2.0 successfully activated\n§gCreator: [WolfZeroStar, Lu-a-png, Luriuker]");
   }
   
   public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
