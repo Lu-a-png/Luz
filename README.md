@@ -1,4 +1,11 @@
 # Luz
-Um Plugin simples para Servidores 
 
-A simple plugin for multiple servers 
+Infinite lighting plugin 
+
+command:
+
+/luz <on/off>
+
+Perm:
+
+Luz.cmd
