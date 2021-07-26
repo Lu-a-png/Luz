@@ -31,16 +31,17 @@ class Main extends Wolf {
             switch($args[0]){
               
               case "on":
-            
-                $sender->addEffect($effect);
-                $effect = new EffectInstace(Effect::getEffect(16), INT32_MAX, 1, false);
-                
+                //$sender->addEffect($effect);
+                $luz = $this->getPlayer()->addEffect(16);
+                //$effect = new EffectInstace(Effect::getEffect(16), INT32_MAX, 1, false);
+                $sender->luz;
                 $sender->sendMessage("§7[§6LUZ§7] §aLuz Ativada Com Sucesso !");
                 return true;
               case "off":
              
-                $sender->removeEffect(16);
-                
+                //$sender->removeEffect(16);
+                $luz = $this->getPlayer()->removeEffect(16);
+                $sender->luz;
                 $sender->sendMessage("§7[§6LUZ§7] §4Luz Desativada Com Sucesso !");
                 }
              }
