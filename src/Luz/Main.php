@@ -7,7 +7,8 @@ use pocketmine\plugin\PluginBase as Wolf;
 //Comandos 
 use pocketmine\command\{CommandSender, Command, ConsoleCommandSender};
 //Efeitos
-use pocketmine\entity\{Effect, EffectInstance};
+use pocketmine\entity\Effect;
+use pocketmine\entity\EffectInstance;
 //Tempo
 use const INT32_MAX;
 
