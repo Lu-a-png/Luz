@@ -23,9 +23,17 @@ class Main extends Wolf {
   public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
     switch($cmd->getName()){
       case "luz":
+        if ($sender instanceof ConsoleCommandSender) {
+			$sender->sendMessage("§cEste comando só pode ser usado no jogo.");
+			return false;
+		}
+    	if(count($args) < 1) {
+			$sender->sendMessage("Use: /luz <on|off>");
+			return false;
+        }
         if($sender->hasPermission("luz.cmd")){
           if(!isset($args[0])){
-            $sender->sendMessage("§6Use: /luz <on|off>");
+            $sender->sendMessage("§c Você não tem permissão");
             return true;
             }
             switch($args[0]){
