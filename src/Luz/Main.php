@@ -1,57 +1,46 @@
 <?php
 
 namespace Luz;
-//Base
-use pocketmine\{Player, Server};
-use pocketmine\plugin\PluginBase as Wolf;
-//Comandos 
-use pocketmine\command\{CommandSender, Command, ConsoleCommandSender};
-//Efeitos
-use pocketmine\event\entity\EntityEffectEvent;
-//Tempo
+
+use pocketmine\Player;
+use pocketmine\Server;
+use pocketmine\plugin\PluginBase;
+use pocketmine\command\CommandSender;
+use pocketmine\command\Command;
+use pocketmine\command\ConsoleCommandSender;
 use const INT32_MAX;
 
-class Main extends Wolf {
+class Main extends PluginBase {
 
-  protected static $effects = [];
-  private $visible;
-  private $duration;
-  
-  public function onEnable(){
-    $this->getLogger()->notice("§aPlugin de Iluminação Infinita v2.0 ativado com sucesso!\n§eCriador:  [WolfZeroStar, Lu-a-png, Luriuker]\n§aInfinite Lighting plugin v2.0 successfully activated\n§gCreator: [WolfZeroStar, Lu-a-png, Luriuker]");
-  }
-  
-  public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
-    switch($cmd->getName()){
-      case "luz":
-        if ($sender instanceof ConsoleCommandSender) {
-			$sender->sendMessage("§cEste comando só pode ser usado no jogo.");
-			return false;
-		}
-    	if(count($args) < 1) {
-			$sender->sendMessage("Use: /luz <on|off>");
-			return false;
-        }
-        if($sender->hasPermission("luz.cmd")){
-          if(!isset($args[0])){
-            $sender->sendMessage("§c Você não tem permissão");
-            return true;
+    public function onEnable(){
+        $this->getLogger()->notice("§aPlugin de Iluminação Infinita v2.0 ativado com sucesso!\n§eCriador:  [WolfZeroStar, Lu-a-png, Luriuker]\n§aInfinite Lighting plugin v2.0 successfully activated\n§gCreator: [WolfZeroStar, Lu-a-png, Luriuker]");
+    }
+
+    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
+        if($cmd->getName() === "luz"){
+            if ($sender instanceof ConsoleCommandSender) {
+                $sender->sendMessage("§cEste comando só pode ser usado no jogo.");
+                return false;
             }
-            switch($args[0]){
-              
-              case "on":
-                $sender->getEffect(16)->getDuration(INT32_MAX)->getEffectLevel(1)->isVisible(false);
-                $sender->sendMessage("§7[§6LUZ§7] §aLuz Ativada Com Sucesso !");
-
-                return true;
-              case "off":
-             
-                $sender->getEffect()->removeEffect(16);
-                $sender->sendMessage("§7[§6LUZ§7] §4Luz Desativada Com Sucesso !");
+            if(count($args) < 1) {
+                $sender->sendMessage("Use: /light <on|off>");
+                return false;
+            }
+            if($sender->hasPermission("luz.cmd")){
+                switch($args[0]){
+                    case "on":
+                        $sender->addEffect(16, INT32_MAX, 1, false);
+                        $sender->sendMessage("§7[§6LIGHT§7] §aLight Activated Successfully !");
+                        return true;
+                    case "off":
+                        $sender->removeEffect(16);
+                        $sender->sendMessage("§7[§6LIGHT§7] §4Light Deactivated Successfully !");
+                        return true;
                 }
-             }
-         }
-      return true;
-      }
-   
+            } else {
+                $sender->sendMessage("§c Você não tem permissão");
+            }
+        }
+        return true;
+    }
 }
