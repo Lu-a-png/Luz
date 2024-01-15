@@ -2,14 +2,14 @@ name: Luz
 api: [5.0.0] 
 main: Luz\Main
 author: Luriuker 
-version: 2.0.0
+version: 2.5
 commands:
   luz:
     description: on|off
-    use: "/luz <on|off>"
+    use: "/ligth <on|off>"
     permission: luz.cmd
 
 permissions:
   luz.cmd:
-    description: Permissão para usa o /luz
+    description: Permissão para usa o /ligth
     default: true
