@@ -4,8 +4,8 @@ Infinite lighting plugin
 
 command:
 
-/luz <on/off>
+/ligth <on/off>
 
 Perm:
 
-Luz.cmd
+luz.cmd
