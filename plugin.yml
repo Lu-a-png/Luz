@@ -1,13 +1,13 @@
 name: Luz
 api: [5.0.0] 
 main: Luz\Main
-author: Luriuker 
-version: 2.5
+author: Lu-a-png 
+version: 3
 commands:
   ligth:
     description: on|off
     use: "/ligth <on|off>"
-    permission: luz.cmd
+    permission: ligth.cmd
 
 permissions:
   ligth.cmd:
