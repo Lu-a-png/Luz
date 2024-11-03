@@ -14,17 +14,17 @@ use pocketmine\entity\effect\VanillaEffects;
 class Main extends PluginBase {
 
     public function onEnable(): void {
-        $this->getLogger()->notice("§aPlugin de Iluminação Infinita v2.0 ativado com sucesso!\n§eCriador:  [WolfZeroStar, Lu-a-png, Luriuker]\n§aInfinite Lighting plugin v2.0 successfully activated\n§gCreator: [WolfZeroStar, Lu-a-png, Luriuker]");
+        $this->getLogger()->notice("§aInfinite Lighting Plugin v2.0 successfully activated!\n§eby:  [Lu-a-png]");
     }
 
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
-        if ($cmd->getName() === "luz") {
+        if ($cmd->getName() === "ligth") {
             if (!$sender instanceof Player) {
-                $sender->sendMessage("Este comando só pode ser usado por jogadores.");
+                $sender->sendMessage("This command can only be used by players.");
                 return true;
             }
             if (count($args) < 1) {
-                $sender->sendMessage("Use: /luz <on|off>");
+                $sender->sendMessage("Use: /ligth <on|off>");
                 return false;
             }
             if ($sender->hasPermission("luz.cmd")) {
@@ -39,11 +39,11 @@ class Main extends PluginBase {
                         $sender->sendTip("§7[§6LIGHT§7] §4Light Deactivated Successfully!");
                         return true;
                     default:
-                        $sender->sendMessage("Use: /luz <on|off>");
+                        $sender->sendMessage("Use: /ligth <on|off>");
                         return false;
                 }
             } else {
-                $sender->sendMessage("§c Você não tem permissão para usar este comando.");
+                $sender->sendMessage("§c You do not have permission to use this command.");
             }
         }
         return true;
