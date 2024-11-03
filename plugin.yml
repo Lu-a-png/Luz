@@ -10,6 +10,6 @@ commands:
     permission: luz.cmd
 
 permissions:
-  luz.cmd:
+  ligth.cmd:
     description: Permissão para usa o /ligth
     default: true
