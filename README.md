@@ -8,4 +8,4 @@ command:
 
 Perm:
 
-luz.cmd
+ligth.cmd
