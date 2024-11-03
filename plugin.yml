@@ -4,7 +4,7 @@ main: Luz\Main
 author: Luriuker 
 version: 2.5
 commands:
-  luz:
+  ligth:
     description: on|off
     use: "/ligth <on|off>"
     permission: luz.cmd
