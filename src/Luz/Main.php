@@ -27,7 +27,7 @@ class Main extends PluginBase {
                 $sender->sendMessage("Use: /ligth <on|off>");
                 return false;
             }
-            if ($sender->hasPermission("luz.cmd")) {
+            if ($sender->hasPermission("ligth.cmd")) {
                 switch (strtolower($args[0])) {
                     case "on":
                         $effect = new EffectInstance(VanillaEffects::NIGHT_VISION(), INT32_MAX, 1, false);
