@@ -1,6 +1,4 @@
-# Luz
-
-Infinite lighting plugin 
+# Infinite lighting plugin 
 
 command:
 
