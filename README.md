@@ -2,8 +2,8 @@
 
 command:
 
-/ligth <on/off>
+/light < auto | on | off >
 
 Perm:
 
-ligth.cmd
+ligth.use
