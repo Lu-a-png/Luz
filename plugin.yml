@@ -2,7 +2,7 @@ name: Luz
 api: [5.0.0]
 main: Luz\Main
 author: Lu-a-png
-version: 3.5
+version: 3.6
 commands:
   light:
     description: auto|on|off
