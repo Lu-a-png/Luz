@@ -2,8 +2,6 @@
 
 # Infinite Lighting Plugin (Luz)
 
-[English below]
-
 ## Descrição
 
 O **Infinite Lighting Plugin** oferece aos jogadores controle total sobre a iluminação pessoal no servidor, com modos automáticos e manuais. Ideal para servidores PocketMine-MP, garante máxima visibilidade em qualquer ambiente, aumentando a jogabilidade e imersão sem comprometer o desempenho.
@@ -37,7 +35,7 @@ O **Infinite Lighting Plugin** oferece aos jogadores controle total sobre a ilum
 
 ### Observações Técnicas
 
-- Compatível com PocketMine-MP.
+- Compatível com PocketMine-MP Versão 5.32.0 .
 - Usa o efeito Night Vision com duração máxima.
 - Threshold de luz configurável via constante (`LIGHT_THRESHOLD`), padrão em 7.
 
@@ -76,7 +74,7 @@ O **Infinite Lighting Plugin** oferece aos jogadores controle total sobre a ilum
 
 ### Technical Notes
 
-- Compatible with PocketMine-MP.
+- Compatible with PocketMine-MP Version 5.32.0 .
 - Uses Night Vision effect with maximum duration.
 - Light threshold configurable via constant (`LIGHT_THRESHOLD`), default is 7.
 
