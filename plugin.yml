@@ -10,5 +10,5 @@ commands:
 
 permissions:
   light.use:
-    description: Permissão para usar o /light
+    description: Permission to use /light
     default: true
